@@ -17,8 +17,18 @@ def split(input):
     return
     str new string with line break in the middle
     '''
+    
+    middle = int(len(input)/2)
+    
+   
 
-    return
+    if input[middle-1] == " " or input[middle] == " ":
+        input = f"{input[:middle]}\n{input[middle:]}"
+
+    elif input[middle-1] != " " or input[middle] == " ":
+        input = f"{input[:middle]}-\n{input[middle:]}"
+
+    return input
 
 if __name__ == "__main__":
     sentence = "There is a big balloon in the blue sky"
