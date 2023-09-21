@@ -20,7 +20,6 @@ def split(input):
     
     middle = int(len(input)/2)
     
-   
 
     if input[middle-1] == " " or input[middle] == " ":
         input = f"{input[:middle]}\n{input[middle:]}"

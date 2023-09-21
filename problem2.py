@@ -9,10 +9,10 @@ import requests
 import re
 
 x = requests.get("https://sd.deltasd.bc.ca")
-split = x.text.split(">")
+x = x.text.split(">")
 
 
-x = re.sub("<.+>","",x.text)
-x = re.sub("{.+}","",x.text)
+x = re.sub("^((?!8230).)*$","",x)
 
-print(x)
+
+print(x[0])
